@@ -13,11 +13,8 @@ class TocarInstrumento {
     }
 }
 
-const tocar_violao = new TocarInstrumento()
-tocar_violao.duracao = '1hora'
-tocar_violao.musicas_tocadas = 'nothing else matters'
-tocar_violao.instrumemto = 'violão'
-tocar_violao.afinacao = 'EADGBE'
+const tocar_violao = new TocarInstrumento('1hora', 'nothing else mattters', 'violâo', 'EADGBE')
+
 tocar_violao.pegar()
 tocar_violao.tocar()
 

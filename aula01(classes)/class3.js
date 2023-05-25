@@ -27,10 +27,8 @@ class TomarBanho {
     }
 }
 
-const tomar_banho = new TomarBanho()
-tomar_banho.tempo = '10m'
-tomar_banho.sabotene_usado = 'protex'
-tomar_banho.shampoo_usado = 'palmolive'
+const tomar_banho = new TomarBanho('10m', 'protex', 'palmolive')
+
 tomar_banho.ligar_chuveiro()
 tomar_banho.colocar_agua_quente()
 

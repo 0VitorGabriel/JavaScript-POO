@@ -15,10 +15,8 @@ class Lampada {
     }
 }
 
-const lampada1 = new Lampada()
-lampada1.preco = 50.00
-lampada1.tipo = 'led'
-lampada1.marca = 'avant'
+const lampada1 = new Lampada(50.00, 'led', 'avant')
+
 lampada1.acender()
 
 console.log(lampada1)

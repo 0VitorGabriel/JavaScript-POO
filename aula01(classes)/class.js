@@ -14,12 +14,7 @@ class Caderno {
     }
 }
 
-const caderno_1 = new Caderno()
-caderno_1.qtd_paginas = 240
-caderno_1.qtd_materias = 12
-caderno_1.preco = 50.00
-caderno_1.marca = 'tilibra'
-caderno_1.cor = 'preto'
+const caderno_1 = new Caderno(240, 12, 50.00, 'tilibra', 'preto')
 
 console.log(caderno_1)
 

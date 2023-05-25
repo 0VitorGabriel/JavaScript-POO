@@ -6,7 +6,7 @@ class Caneta {
         this.modelo = modelo
         this.#ponta = ponta
         this.carga = carga
-        this.tampada = tampada
+        this.#tampada = tampada
         this.cor = cor
     }
 
@@ -35,12 +35,7 @@ class Caneta {
     }
 }
 
-const caneta1 = new Caneta()
-caneta1.modelo = 'BIC cristal'
-caneta1.cor = 'azul'
-// caneta1.#ponta = 0.5
-caneta1.carga = 80
-// caneta1.#tampada = false
-caneta1.destampar()
+const caneta1 = new Caneta('BIC cristal', '80')
+caneta1.tampar()
 
 caneta1.status()
