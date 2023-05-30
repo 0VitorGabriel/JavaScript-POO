@@ -10,14 +10,14 @@ class Lutador {
     #categoria
 
     constructor(nome, nacionalidade, peso, altura, idade, vitorias, derrotas, empates) {
-        this.#nome = nome
-        this.#nacionalidade = nacionalidade
+        this.nome = nome
+        this.nacionalidade = nacionalidade
         this.peso = peso
-        this.#altura = altura 
-        this.#idade = idade 
-        this.#vitorias = vitorias 
-        this.#derrotas = derrotas 
-        this.#empates = empates
+        this.altura = altura 
+        this.idade = idade 
+        this.vitorias = vitorias 
+        this.derrotas = derrotas 
+        this.empates = empates
     }
 
     apresentar() {
@@ -28,7 +28,7 @@ class Lutador {
         console.log(`peso: ${this.peso}kg`)
         console.log(`vitorias: ${this.vitorias}`)
         console.log(`derrotas: ${this.derrotas}`)
-        console.log(`empate: ${this.empate}`)
+        console.log(`empate: ${this.empates}`)
     }
 
     status() {
@@ -66,14 +66,14 @@ class Lutador {
     set peso(peso) {
         this.#peso = peso
 
-        this.categoria = peso
+        this.#setCategoria = peso
     }
 
     get categoria() {
         return this.#categoria
     }
 
-    set categoria(peso) {
+    set #setCategoria(peso) {
         if (peso < 52.2) {
             this.#categoria = 'inválido'
         } else if (peso <= 70.3) {

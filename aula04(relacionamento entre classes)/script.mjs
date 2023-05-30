@@ -67,3 +67,8 @@ lutadores[5] = new Lutador(
     2,
     4
 )
+
+lutadores[2].empatar()
+lutadores[2].ganhar()
+lutadores[2].perder()
+lutadores[2].status()
