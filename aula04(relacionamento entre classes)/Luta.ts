@@ -14,42 +14,44 @@ class Luta {
         this._aprovada = aprovada
     }
 
-    public marcarLuta(lutador1: Lutador, lutador2: Lutador) {
-        if (lutador1.categoria === lutador2.categoria && lutador1 !== lutador2) {
+    public marcarLuta() {
+        if (this._desafiado.categoria == this._desafiante.categoria && this._desafiado != this._desafiante) {
             this.aprovada = true
-            this.desafiado = lutador1
-            this.desafiante = lutador2
         } else {
             this.aprovada = false
+            console.log('não pode lutar!')
         }
     }
 
     public lutar() {
         if (this.aprovada) {
-            this._desafiado.apresentar()
-            this._desafiante.apresentar()
+            console.log('--- desafiado ---')
+            this._desafiado.status()
+            console.log('--- desafiante ---')
+            this._desafiante.status()
+
             let vencedor = Math.floor(
                 Math.random() * (2 - 0) + 0
             )
 
+            console.log('--- status ---')
             switch (vencedor) {
                 case 0:
-                    console.log('empatou')
+                    console.log('empate')
                     this._desafiado.empatar()
                     this._desafiante.empatar()
                     break
                 case 1:
-                    console.log(this._desafiado.nome + 'ganhou!')
+                    console.log(this._desafiado.nome + ' ganhou!')
                     this._desafiado.ganhar()
                     this._desafiante.perder()
                     break
                 case 2:
-                    console.log(this._desafiado.nome + 'perdeu!')
+                    console.log(this._desafiante.nome + ' perdeu!')
                     this._desafiado.perder()
                     this._desafiante.ganhar()
                     break
             }
-
 
         } else {
             console.log('a luta deve ser aprovada para acontecer a luta')

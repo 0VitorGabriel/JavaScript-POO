@@ -13,13 +13,12 @@ class Lutador {
         this._nome = nome
         this._nacionalidade = nacionalidade
         this._peso = peso
-        this._categoria = categoria
-        this.setCategoria(peso)
         this._altura = altura 
         this._idade = idade 
         this._vitorias = vitorias 
         this._derrotas = derrotas 
         this._empates = empates
+        this._categoria = categoria
     }
 
     apresentar() {
@@ -57,7 +56,7 @@ class Lutador {
         return this._nome
     }
 
-    set nome(nome) {
+    set nome(nome: String) {
         this._nome = nome
     }
 
@@ -65,28 +64,16 @@ class Lutador {
         return this._peso
     }
 
-    set peso(peso) {
+    set peso(peso: Number) {
         this._peso = peso
-
-        this.setCategoria(peso)
     }
 
     get categoria() {
         return this._categoria
     }
 
-    setCategoria(peso: Number) {
-        if (Number(peso) < 52.2) {
-            this._categoria = 'inválido'
-        } else if (Number(peso) <= 70.3) {
-            this._categoria = 'leve'
-        } else if (Number(peso) <= 83.9) {
-            this._categoria = 'médio'
-        } else if (Number(peso) <= 120.2) {
-            this._categoria = 'pesado'
-        } else {
-            this._categoria = 'inválido'
-        }
+    set categoria(categoria: String) {
+        this._categoria = categoria
     }
 
     get nacionalidade() {

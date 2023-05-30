@@ -10,7 +10,7 @@ let lutador1 = new Lutador(
     11,
     3,
     1,
-    'a'
+    'leve'
 )
 
 let lutador2 = new Lutador(
@@ -22,7 +22,7 @@ let lutador2 = new Lutador(
     14,
     2,
     3,
-    'a'
+    'leve'
 )
 
 let lutador3 = new Lutador(
@@ -34,7 +34,7 @@ let lutador3 = new Lutador(
     12,
     2,
     1,
-    'a'
+    'medio'
 )
 
 let lutador4 = new Lutador(
@@ -46,7 +46,7 @@ let lutador4 = new Lutador(
     13,
     0,
     2,
-    'a'
+    'medio'
 )
 
 let lutador5 = new Lutador(
@@ -58,7 +58,7 @@ let lutador5 = new Lutador(
     5,
     4,
     3,
-    'a'
+    'pesado'
 )
 
 let lutador6 = new Lutador(
@@ -70,9 +70,9 @@ let lutador6 = new Lutador(
     12,
     2,
     4,
-    'a'
+    'pesado'
 )
 
-let UEC01 = new Luta(lutador1, lutador6, 3, false)
-UEC01.marcarLuta(lutador1, lutador2)
+let UEC01 = new Luta(lutador5, lutador6, 3, false)
+UEC01.marcarLuta()
 UEC01.lutar()
