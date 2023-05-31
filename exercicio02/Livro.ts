@@ -9,23 +9,28 @@ class Livro implements Publicacao {
     private _aberto: Boolean
     private _leitor: Pessoa
 
-    constructor(titulo: String, autor: String, totalPaginas: Number, paginaAtual: Number, aberto: Boolean, leitor: Pessoa) {
+    constructor(titulo: String, autor: String, totalPaginas: Number, leitor: Pessoa) {
         this._titulo = titulo 
         this._autor = autor 
         this._totalPaginas = totalPaginas 
-        this._paginaAtual = paginaAtual 
-        this._aberto = aberto 
+        this._paginaAtual = 0 
+        this._aberto = false 
         this._leitor = leitor
     }
 
-    detalhes(): void {
-        console.log('--- STATUS ---')
-        console.log(`leitor: ${this.leitor.nome};`)
-        console.log(`O livro que ${this.leitor.nome} está lendo é ${this.titulo};`)
-        console.log(`total de paginas do livro: ${this.totalPaginas};`)
-        console.log(`página que o ${this.leitor.nome} está agora: ${this.paginaAtual};`)
-        console.log(`livro aberto? ${this.aberto};`)
-        console.log(`nome do autor do livro: ${this.autor}.`)
+    detalhes(): String {
+        return (
+            `
+                --------------------------- STATUS ------------------------------
+                leitor: ${this.leitor.nome} 
+                gênero do autor: ${this.leitor.sexo} 
+                O livro que ${this.leitor.nome} está lendo é ${this.titulo}; 
+                total de paginas do livro: ${this.totalPaginas}; 
+                página que o ${this.leitor.nome} está agora: ${this.paginaAtual}; 
+                livro aberto? ${this.aberto}; 
+                nome do autor do livro: ${this.autor}.
+            `
+        )
     }
 
     abrir(): void {
